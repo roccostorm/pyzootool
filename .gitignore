@@ -2,3 +2,4 @@
 dist
 pyzootool.egg-info
 *.swp
+build
