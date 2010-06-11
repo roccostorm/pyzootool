@@ -88,7 +88,7 @@ class ZooItem():
             zoo_results.append(result)
         return zoo_results
         
-    def get_items_by_user(self, username):
+    def get_items_by_user(self, username, offset=None, limit=None, login=None):
         """
         Arguement:
             username - user we should grab items from
@@ -100,6 +100,12 @@ class ZooItem():
         back an array of ZooItemResults
         """
         values = {'username': username, 'apikey': self.apikey}
+        if login:
+            values['login'] = login
+        if offset:
+            values['offset'] = offset
+        if limit:
+            values['limit'] = limit
         url = "%s/api/users/items/?%s" % (
             ROOT_URL, urllib.urlencode(values)
         )
