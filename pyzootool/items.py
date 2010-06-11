@@ -92,6 +92,9 @@ class ZooItem():
         """
         Arguement:
             username - user we should grab items from
+            offset - add an offset
+            limit - limits the result
+            login - 
             
         Returns:
             zoo_results - Array of ZooItemResults
