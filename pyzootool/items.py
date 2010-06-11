@@ -31,6 +31,7 @@ class ZooItemResult():
             self.permalink = json_data['permalink']
             self.tinyurl = json_data['tinyurl']
             self.thumbnail = json_data['thumbnail']
+            self.added = json_data['added']
         except AttributeError:
             raise error.ZooError("Failed to parse item json")
 
